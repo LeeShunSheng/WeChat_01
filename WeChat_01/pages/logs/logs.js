@@ -1,4 +1,4 @@
-// pages/index/index.js
+// pages/logs/logs.js
 Component({
   /**
    * 组件的属性列表

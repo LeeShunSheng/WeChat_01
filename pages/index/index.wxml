@@ -1,8 +1,0 @@
-<view class="box1">
-  <image src="/static/image/f-p.jpg" class="headset"></image>
-  <text class="userName">魔法师</text>
-  <view class="hello">
-    <text>hello world </text>
-  </view>
-
-</view>

@@ -1,0 +1,14 @@
+<view class="box1">
+  <image wx:if='{{userInfo.avatarUrl}}'
+    src="{{userInfo.avatarUrl}}" class="headset"></image>
+  <!-- 获取用户授权（首次登陆） -->
+  <button wx:else open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">获取用户信息</button>
+  <text class="userName">{{userInfo.nickName}}</text>
+  <view wx:if='{{userInfo.avatarUrl}}' class="hello" catchtap="handleParent">
+    <text bindtap = "handleChild">hello world </text>
+  </view>
+
+  <view wx:if='{{userInfo.avatarUrl}}' class="hello" catchtap="toLogs">
+    <text>go to logs</text>
+  </view>
+</view>
