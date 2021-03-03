@@ -1,0 +1,12 @@
+{
+  "pages":[
+   "pages/index/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#6cf",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "乱写的"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/profile/profile",
+    "pages/login/login",
+    "pages/agreement/agreement"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#00b26a",
+    "navigationBarTitleText": "登陆",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap85.json"
+}

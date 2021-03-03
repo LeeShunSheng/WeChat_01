@@ -1,0 +1,54 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  place-items: center;
+}
+/* 头像 */
+.head{
+  width: 200rpx;
+  height: 200rpx;
+  border:1rpx black solid;
+  border-radius: 50%;
+  margin:100rpx 0;
+}
+.icon-denglu{
+  font-size: 200rpx;
+  line-height: 200rpx;
+}
+.login{
+  font-size:40rpx;
+  display: table;
+  margin:20rpx auto;
+}
+
+.login-btn{
+  width: 600rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin:20rpx auto;
+  border-radius: 10rpx;
+}
+.wechat-login{
+  background-color: white;
+  color:rgb(0, 178, 106);
+  border: 1rpx rgb(0, 178, 106) solid;
+}
+.login-btn:hover{
+  box-shadow: 5px 5px 5px #cdcfcf;
+}
+.douban-login{
+  background-color: rgb(0, 178, 106);
+  color:white;
+}
+/* 页面底部协议部分 */
+.foot{
+  color:gray;
+  font-size: 30rpx;
+  position: absolute;
+  bottom: 50rpx;
+}
+.foot .open{
+  color: rgb(0, 178, 106);
+  font-size: 30rpx;
+}

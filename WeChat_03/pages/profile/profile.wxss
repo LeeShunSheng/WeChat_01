@@ -1,0 +1,28 @@
+.container{
+  text-align: center;
+}
+.login{
+  background-color: #00b29f;
+  height: 400rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login .login-btn{
+  background-color: white;
+  color: #1e4826;
+  border-radius: 50rpx;
+  font-size: 50rpx;
+  height: 100rpx;
+  width: 250rpx;
+  line-height: 100rpx;
+  box-shadow: 5px 5px 5px #8f9191;
+}
+
+.version{
+  width: 100%;
+  position: absolute;
+  bottom: 30rpx;
+  color: #c9c9c9;
+  font-size: 26rpx;
+}

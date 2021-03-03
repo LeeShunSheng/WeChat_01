@@ -1,0 +1,67 @@
+<view class="indexContainer">
+  <!-- 轮播图区域 -->
+  <swiper class="banners" 
+    indicator-dots 
+    indicator-color="#6cf"
+    indicator-active-color="#bfa"
+    autoplay>
+    <swiper-item>
+      <image src="/static/images/1.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/static/images/kalan.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/static/images/凯尔希.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/static/images/整合.jpg"></image>
+    </swiper-item>
+  </swiper>
+  <!-- 图标导航区域 -->
+  <view class="navContainer">
+    <view class="navItem">
+      <text class="iconfont icon-zhuanji"></text>
+      <text>专辑</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-qiabao"></text>
+      <text>抽卡</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-guanwang"></text>
+      <text>官网</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-gonggao"></text>
+      <text>公告</text>
+    </view>
+  </view>
+  <!-- 推荐专辑 -->
+  <view class="recommendContainer">
+    <view class="header">
+      <text class="title">推荐专辑</text>
+      <text class="more">查看更多</text>       
+    </view>
+  </view>
+  <!-- 内容区 -->
+  <scroll-view class="recommendScroll" enable-flex scroll-x>
+    <view class="scrollItem">
+      <image src="/static/images/album/春弦.jpg"></image>
+      <text>春弦</text>
+    </view>
+    <view class="scrollItem">
+      <image src="/static/images/album/夏浪.jpg"></image>
+      <text>夏浪</text>
+    </view>
+    <view class="scrollItem">
+      <image src="/static/images/album/秋绪.jpg"></image>
+      <text>秋绪</text>
+    </view>
+    <view class="scrollItem">
+      <image src="/static/images/album/冬涤.jpg"></image>
+      <text>冬涤</text>
+    </view>
+  </scroll-view>
+  
+</view>
