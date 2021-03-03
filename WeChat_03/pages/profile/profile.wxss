@@ -1,12 +1,14 @@
-.container{
-  text-align: center;
-}
+/* 头部 */
+
 .login{
   background-color: #00b29f;
-  height: 400rpx;
+  height: 300rpx;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  border-top:1rpx black solid;
+  border-bottom: 1rpx black solid;
 }
 .login .login-btn{
   background-color: white;
@@ -18,11 +20,80 @@
   line-height: 100rpx;
   box-shadow: 5px 5px 5px #8f9191;
 }
-
+/* 底部 */
 .version{
   width: 100%;
   position: absolute;
   bottom: 30rpx;
+  text-align: center;
   color: #c9c9c9;
   font-size: 26rpx;
+}
+/* 中间 */
+.title{
+  padding:20rpx 20rpx;
+}
+.t-left{
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.t-right{
+  float: right;
+  color: #c9c9c9;
+}
+/* item */
+.item{
+  height: 130rpx;
+  width: 100%;
+  display:flex;
+  justify-items: center;
+  padding:20rpx 0;
+}
+.item:hover{
+  border-top: 1rpx #8f9191 solid;
+  border-bottom: 1rpx #8f9191 solid;
+}
+.iconfont{
+  font-size:80rpx;
+  line-height: 80rpx;
+  padding:10rpx 40rpx;
+}
+.info{
+  display: inline-block;
+  
+  display: flex;
+}
+.li_top{
+  font-size:32rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+.li_bottom{
+  float:bottom;
+}
+.li_bottom .count{
+  font-size:40rpx;
+  display: inline-block;
+  padding-right: 10rpx;
+}
+.right_info{
+  display:flex;
+}
+.right_info .text{
+  width: 250rpx;
+  margin: 10rpx 0 0 20rpx;
+  font-size: 30rpx;
+  color:grey;
+}
+.right_info .begin{
+  width: 150rpx;
+  height: 50rpx;
+  border:1rpx black solid;
+  border-radius: 20rpx;
+  text-align: center;
+  justify-items: center;
+  margin:20rpx 0 20rpx 20rpx;
+  box-shadow:5rpx 5rpx #9e9494 ;
+  font-size:32rpx;
+  font-weight: bold;
 }

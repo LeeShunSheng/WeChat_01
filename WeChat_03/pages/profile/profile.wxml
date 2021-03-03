@@ -2,7 +2,59 @@
   <view class="login">
     <view class="login-btn">登录</view>
   </view>
-
+  <view class="center">
+    <view class="title">
+      <text class="t-left">我的浏览记录</text>
+      <text class="t-right">登录查看</text>
+    </view>
+    <view class="items">
+      <view class="item">
+        <text class="iconfont {{items[0].icon}}"/>
+        <view class="info">
+          <view class="left_info">
+            <view class="li_top">{{items[0].title}}</view>
+            <view class="li_bottom">
+              <view class="count">{{items[0].count}}</view>看过
+            </view>
+          </view>
+          <view class="right_info">
+            <view class="text">{{items[0].detail}}</view>
+            <view class="begin">立即开启</view>
+          </view>
+        </view>
+      </view>
+      <view class="item">
+        <text class="iconfont {{items[1].icon}}"/>
+        <view class="info">
+          <view class="left_info">
+            <view class="li_top">{{items[1].title}}</view>
+            <view class="li_bottom">
+              <view class="count">{{items[1].count}}</view>听过
+            </view>
+          </view>
+          <view class="right_info">
+            <view class="text">{{items[1].detail}}</view>
+            <view class="begin">立即开启</view>
+          </view>
+        </view>
+      </view>
+      <view class="item">
+        <text class="iconfont {{items[2].icon}}"/>
+        <view class="info">
+          <view class="left_info">
+            <view class="li_top">{{items[2].title}}</view>
+            <view class="li_bottom">
+              <view class="count">{{items[2].count}}</view>看过
+            </view>
+          </view>
+          <view class="right_info">
+            <view class="text">{{items[2].detail}}</view>
+            <view class="begin">立即开启</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
   <view class="version"> 版本 1.0.1 SNAPSHOT</view>
 
 </view>
