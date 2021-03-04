@@ -26,6 +26,24 @@ Page({
     ]
   },
 
+  begin(evt){
+    console.log(evt);
+    const item = evt.currentTarget.id;
+    if(item == 'item-0'){
+      console.log('item-0');
+    } else if(item == 'item-1'){
+      console.log('item-1');
+    } else if(item == 'item-2'){
+      console.log('item-2');
+    } else{
+      console.log('???');
+    }
+  },
+  login_btn(){
+    wx.navigateTo({
+      url: '/pages/login/login'
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

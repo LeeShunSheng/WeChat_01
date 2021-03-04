@@ -1,13 +1,38 @@
 {
   "pages": [
-    "pages/profile/profile",
     "pages/login/login",
-    "pages/agreement/agreement"
+    "pages/profile/profile",
+    "pages/agreement/agreement",
+    "pages/home/home"
   ],
+  "entryPagePath": "pages/home/home",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于获取当地影院信息" 
+    }
+  },
   "window": {
     "navigationBarBackgroundColor": "#00b26a",
-    "navigationBarTitleText": "登陆",
-    "navigationBarTextStyle": "white"
+    "navigationBarTitleText": "登录",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "首页",
+      "iconPath": "/static/images/首页.png",
+      "selectedIconPath": "/static/images/首页 - 选中.png"
+    },{
+      "pagePath": "pages/profile/profile",
+      "text": "我的",
+      "iconPath": "/static/images/我的.png",
+      "selectedIconPath": "/static/images/我的 选中.png"
+    }
+  ],
+  "backgroundColor": "#00b26a",
+  "color": "#bfa",
+  "selectedColor": "#6cf"
   },
   "sitemapLocation": "sitemap85.json"
 }

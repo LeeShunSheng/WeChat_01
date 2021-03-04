@@ -1,12 +1,12 @@
 <view class="container">
   <view class="head">
     <text class="iconfont icon-denglu"/>
-    <text class="login">登陆</text>
+    <text class="login">登录</text>
   </view>
-  <view class="wechat-login login-btn" bindtap="wechat_login">微信登陆</view>
-  <view class="douban-login login-btn" bindtap="douban_login">豆瓣帐号登陆</view>
+  <view class="wechat-login login-btn" bindtap="wechat_login">微信登录</view>
+  <view class="douban-login login-btn" bindtap="douban_login">豆瓣帐号登录</view>
   <view class="foot">
-    <text>登陆表示同意</text>
+    <text>登录表示同意</text>
     <text class="open" bindtap="userAgreement"> 用户隐私协议</text>
   </view>
 </view>
