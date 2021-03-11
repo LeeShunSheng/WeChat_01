@@ -1,0 +1,57 @@
+/* 页面 */
+page{
+  background-color: #bfd;
+}
+/* 标题文字 */
+.title{
+  text-align: center;
+  font-size: 40rpx;
+  color:#6cf;
+  font-weight: bolder;
+}
+/* 天气显示 */
+.body{
+  margin-top:100rpx;
+  text-align: center;
+}
+/* 位置 */
+.city{
+  font-size: 40rpx;
+  font-weight: bolder;
+}
+/* 温度 */
+.temperature{
+  font-size: 100rpx;
+  margin: 30rpx;
+}
+/* 摄氏度符号 */
+.sign{
+  position: absolute;
+  right: 250rpx;
+  top: 260rpx;
+}
+.weather{
+  margin: 60rpx auto;
+  font-size: 40rpx;
+  font-weight: bolder;
+}
+.iconfont{
+  font-size: 200rpx;
+}
+.others{
+  position: absolute;
+  bottom: 150rpx;
+  width: 100%;
+}
+.others view{
+  display: inline;
+  margin: 0 2%;
+}
+/* 底部 */
+.bottom{
+  font-size: 32rpx;
+  position: absolute;
+  bottom: 10rpx;
+  left: 150rpx;
+  color: grey;
+}

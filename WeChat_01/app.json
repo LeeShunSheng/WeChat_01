@@ -1,12 +1,35 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/logs/logs"
+  "pages":[
+   "pages/home/home",
+   "pages/forecast/forecast"
   ],
-  "window": {
-    "navigationBarBackgroundColor": "#66ccff",
-    "navigationBarTitleText": "标题没想好",
-    "navigationBarTextStyle": "black"
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于获取天气情况" 
+    }
   },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#bfa",
+    "navigationBarTitleText": "天气 · 预报",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#000",
+    "backgroundColor": "#bfa",
+    "selectedColor": "#6cf",
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "当前天气",
+      "iconPath": "/pages/static/image/hello.png",
+      "selectedIconPath": "/pages/static/image/onepunch.png"
+    },{
+      "pagePath": "pages/forecast/forecast",
+      "text": "预报",
+      "iconPath": "/pages/static/image/remember.png",
+      "selectedIconPath": "/pages/static/image/onepunch.png"
+    }]
+  },
+  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

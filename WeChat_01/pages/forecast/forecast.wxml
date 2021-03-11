@@ -1,0 +1,28 @@
+<view class="head">(只显示近4天天气)</view>
+<swiper class="body">
+  <block wx:for="{{casts}}" wx:key="*this" wx:for-item>
+    <swiper-item class="day">
+
+      <view class="date">{{item.date}} <text decode>&ensp;&ensp;&ensp;</text> 星期{{item.week}}</view> 
+
+      <view class="weather white">
+        <view>白天风力: {{item.daypower}}级</view>
+        <view>白天温度: {{item.daytemp}}℃</view>
+        <view>白天天气: {{item.dayweather}}</view>
+        <view>白天风向: {{item.daywind}}</view>
+        <text class="iconfont {{item.sd_icon}}"></text>
+      </view>
+
+      <view class="weather black">
+        <view>夜间风力: {{item.nightpower}}级</view>
+        <view>夜间温度: {{item.nighttemp}}℃</view>
+        <view>夜间天气: {{item.nightweather}}</view>
+        <view>夜间风力: {{item.nightwind}}</view>
+        <text class="iconfont {{item.sn_icon}}"></text>
+      </view>
+
+    </swiper-item>
+    
+  </block>
+</swiper>
+<view class="bottom">更新于{{reporttime}}来自<text>高德地图</text></view>

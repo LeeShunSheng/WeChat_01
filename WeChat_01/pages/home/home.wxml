@@ -1,0 +1,23 @@
+<view class="page">
+  <view class="head">
+    <view class="title">当前天气</view>
+  </view>
+  <view class="body">
+    <view class="city">{{weather.city}}</view>
+    
+    <view class="temperature">{{weather.temperature}}</view>
+    <view class="sign">℃</view>
+    <view class="weather">{{weather.weather}}</view>
+    <text class="iconfont {{weather.s_icon}}"></text>
+
+    <view class="others">
+      <view class="humidity">空气湿度：{{weather.humidity}}</view>
+      <view class="winddirection">风向：{{weather.winddirection}}</view>
+      <view class="windpower">风力：{{weather.windpower}}</view>
+    </view>
+    
+  </view>
+  <view class="bottom">
+    <view>发布时间：{{weather.reporttime}}</view>
+  </view>
+</view>
