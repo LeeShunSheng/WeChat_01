@@ -1,6 +1,0 @@
-<view class="cantain">
-  <form catchsubmit="formSubmit">
-    <textarea name="even" cols="40" rows="20" class="myTest" placeholder="输入要记录的事件(不超过50字)" auto-height/>
-    <button form-type="submit" class="btn">提交</button>
-  </form>
-</view>
