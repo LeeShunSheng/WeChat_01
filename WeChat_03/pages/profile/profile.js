@@ -4,7 +4,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    items:[
+    myItems:[
       {
         title:'观影分析',
         detail:'标记10部影片，开启观影分析',

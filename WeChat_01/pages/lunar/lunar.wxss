@@ -1,0 +1,78 @@
+.contain{
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  height: 100%;
+}
+
+.theForm{
+  padding-top: 30rpx;
+}
+
+.btn{
+  background-color: rgb(16,195,102);
+}
+
+.search{
+  margin: 30rpx 0;
+  margin-left: 14%;
+  background-color: white;
+  width: 70%;
+  outline: 1rpx black solid;
+}
+
+.today{
+  margin-top: 50rpx;
+}
+.date{
+  font-weight: bolder;
+  font-size: 40rpx;
+  margin-bottom: 30rpx;
+  margin-top: 30rpx;
+}
+.show{
+  float: left;
+  width:300rpx;
+  margin-top: 90rpx;
+  margin: 0 34rpx;
+  background-color: yellowgreen;
+  height: 200rpx;
+  border-radius: 40rpx;
+}
+.l_text{
+  font-weight: bolder;
+}
+.fitness{
+  color:red;
+}
+.taboo{
+  color: black;
+}
+.event{
+  float: left;
+  /* border:1rpx black solid; */
+  border-radius: 20rpx;
+  padding: 20rpx;
+  width: 400rpx;
+  margin-left: 155rpx;
+  margin-top: 100rpx;
+}
+.etitle{
+  font-weight: bolder;
+  margin-bottom: 20rpx;
+}
+.f_btn{
+  background-color: #9ACD32;
+  margin: 20rpx;
+}
+.myTest{
+  text-align: center;
+  padding-left: 0;
+  outline:1rpx black solid;
+  position: relative;
+  left:-100rpx;
+}
+.text_btn{
+  margin-top: 20rpx;
+  background-color: #9ACD32;
+}

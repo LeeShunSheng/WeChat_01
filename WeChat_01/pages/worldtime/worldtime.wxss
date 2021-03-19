@@ -1,0 +1,43 @@
+.contain{
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  height: 100%;
+}
+
+.theForm{
+  padding-top: 30rpx;
+}
+
+.btn{
+  background-color: rgb(16,195,102);
+}
+
+.search{
+  margin: 30rpx 0;
+  margin-left: 14%;
+  background-color: white;
+  width: 70%;
+  outline: 1rpx black solid;
+}
+
+.main{
+  margin-top: 100rpx;
+}
+.show{
+  text-align: left;
+  float: left;
+  width:500rpx;
+  margin: 0 100rpx;
+  font-weight: bolder;
+}
+.quality,
+.err{
+  font-weight: bolder;
+  color: red;
+}
+.uTime{
+  position: absolute;
+  bottom: 20rpx;
+  margin-left: 100rpx;
+}

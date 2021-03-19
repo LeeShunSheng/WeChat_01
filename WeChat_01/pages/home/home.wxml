@@ -20,4 +20,17 @@
   <view class="bottom">
     <view>发布时间：{{weather.reporttime}}</view>
   </view>
+
+  <!-- 写几个脱离文档流的图标以便跳转至其他页面 -->
+  <view class="lunar c_btn" bindtap="jumpToLunar">
+    <view class="h_text">黄历</view>
+  </view>
+
+  <view class="a_con c_btn" bindtap="jumpToAirC">
+    <view class="a_text">空气质量</view>
+  </view>
+
+  <view class="t_con c_btn" bindtap="jumpToWorldTime">
+    <view class="t_text">世界时间</view>
+  </view>
 </view>

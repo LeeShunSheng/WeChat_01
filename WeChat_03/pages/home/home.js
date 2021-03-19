@@ -6,7 +6,8 @@ Page({
    */
   data: {
     latitude: 40,
-    longitude: 120
+    longitude: 120,
+    city:'渤海'
   },
   search(){
     console.log('调用搜索功能');
@@ -24,14 +25,39 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.getCity();
+    wx.request({
+      url: 'https://douban.uieee.com/v2/movie/in_theaters',
+    })
+  },
+  // 获取所在市信息
+  getCity:function(){
     wx.getLocation({
       success:(res)=>{
         console.log(res);
         this.setData({
           latitude: res.latitude,
-          longtitude: res.longitude
+          longitude: res.longitude
         })
-        console.log('经度: '+this.data.latitude +' 纬度: '+this.data.longtitude)
+        wx.request({
+          url: 'https://restapi.amap.com/v3/geocode/regeo',
+          data:{
+            key:'2ca8c96e40912c0e81a0a9ebe9e9ade2',
+            location:this.data.longitude + ',' + this.data.latitude,
+            radius:'1000'
+          },
+          success:(res)=>{
+            let v_city = res.data.regeocode.addressComponent.city;
+            v_city = v_city.substring(0,v_city.length-1);
+            this.setData({
+              city:v_city
+            })
+            console.log(this.data.city);
+          },
+          fail:(err)=>{
+            console.log(err);
+          }
+        })
       },
       fail(){
         console.log('获取位置失败');

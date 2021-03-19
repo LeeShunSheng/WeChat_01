@@ -55,3 +55,35 @@ page{
   left: 150rpx;
   color: grey;
 }
+/* 按钮 */
+.c_btn{
+  width:80rpx;
+  height: 80rpx;
+  background-color: red;
+  border-radius: 80rpx;
+  position: absolute;
+  line-height: 80rpx;
+  box-shadow: 10rpx 10rpx 10rpx rgb(46,46,46);
+}
+.c_btn:hover{
+  background-color: green;
+}
+.lunar{
+  top:50rpx;
+}
+.h_text{
+  padding-left: 8rpx;
+}
+
+.a_con{
+  top:150rpx;
+}
+.a_text,
+.t_text{
+  font-size:20rpx;
+}
+
+.t_con{
+  top:250rpx;
+}
+

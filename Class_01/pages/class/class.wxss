@@ -1,0 +1,11 @@
+.line {
+  width: 100%;
+  text-align: center; 
+  float: left;
+}
+view:first-child:nth-last-child(4), .line~view{
+  width: 25%;
+}
+view:first-child:nth-last-child(5), .line~view{
+  width: 20%;
+}

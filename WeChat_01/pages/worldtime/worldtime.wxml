@@ -1,0 +1,25 @@
+<view class="contain">
+  <view class="theForm">
+    <form catchsubmit="formSubmit" method="get">
+      <view>
+        <view>输入要查询城市：</view>
+        <input type="text"  class="search" placeholder="形如'北京'" name="city"/>
+      </view>
+      <button form-type="submit" class="btn">搜索</button>
+    </form>
+  </view>
+    <view class="main" wx:if="{{result}}">
+      <view class="show">
+        <view>所在国家：{{result.country}}</view>
+        <view>时区：{{result.timeZone}}</view>
+        <view>时间：{{result.strtime}}</view>
+        <view>时间戳：{{result.timestamp}}</view>
+        <view>星期：{{result.weeknum}}</view>
+      </view>
+      <view class="uTime">更新时间：{{result.time}}</view>
+    </view>
+    <view class="main" wx:if="{{err}}">
+        <view class="err">获取城市信息失败</view>
+    </view>
+</view>
+

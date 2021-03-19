@@ -1,7 +1,10 @@
 {
   "pages":[
    "pages/home/home",
-   "pages/forecast/forecast"
+   "pages/forecast/forecast",
+   "pages/lunar/lunar",
+   "pages/aqi/aqi",
+   "pages/worldtime/worldtime"
   ],
   "permission": {
     "scope.userLocation": {
@@ -10,8 +13,8 @@
   },
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#bfa",
-    "navigationBarTitleText": "天气 · 预报",
+    "navigationBarBackgroundColor": "#bff",
+    "navigationBarTitleText": "天气 · 时钟",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {

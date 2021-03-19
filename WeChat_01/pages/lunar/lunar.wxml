@@ -1,0 +1,42 @@
+<view class="contain">
+  <view class="theForm">
+    <form catchsubmit="formSubmit" method="get">
+      <view>
+        <view>输入要查询的日期：</view>
+        <input type="text"  class="search" placeholder="形如'2021-3-19'" name="message"/>
+      </view>
+      <button form-type="submit" class="btn">搜索</button>
+    </form>
+  </view>
+    <view class="today" wx:if="{{!err}}">
+      <view class="date" wx:if="{{today}}">今日事项</view>
+      <view class="date" wx:if="{{sday}}">{{sday}}</view>
+      <view class="show">
+        <view class="fitness l_text">宜</view>
+        <view class="fitness l_text">{{fitness}}</view>
+      </view>
+      <view class="show">
+        <view class="taboo l_text">不宜</view>
+        <view class="taboo l_text">{{taboo}}</view>
+      </view>
+    </view>
+    <view class="today" wx:else>
+      <view class="date">{{err}}</view>
+    </view>
+    <view class="event">
+      <view class="etitle" wx:if="{{showText==0}}">安排</view>
+      <view class="econ" wx:if="{{!myEvent&&showText==0}}">暂无</view>
+      <view class="econ" wx:if="{{showText==0}}">{{myEvent}}</view>
+      <view class="theForm">
+        <form catchsubmit="textSubmit" wx:if="{{showText==1}}">
+          <textarea name="even" cols="40" rows="20" class="myTest" placeholder="请输入事件(少于50字)" auto-height/>
+          <button form-type="submit" class="text_btn">提交</button>
+        </form>
+      </view>
+
+      <button class="f_btn" size="mini" wx:if="{{myEvent}}" bindtap="delEvent">删除</button>
+      <button class="f_btn"  size="mini" wx:if="{{myEvent}}" bindtap="updEvent">更新</button>
+      <button class="f_btn" wx:if="{{!myEvent&&showText==0}}" bindtap="creEvent">创建事件</button>
+    </view>
+</view>
+

@@ -8,7 +8,7 @@
       <text class="t-right"  catchtap="login_btn">登录查看</text>
     </view>
     <view class="items">
-      <view class="item" wx:for="{{items}}" wx:key="key">
+      <view class="item" wx:for="{{myItems}}" wx:key="key">
         <text class="iconfont {{item.icon}}"/>
         <view class="info">
           <view class="left_info">

@@ -1,0 +1,5 @@
+<view class="contain">
+  <view class="head"></view>
+  <view class="body"></view>
+  <view class="foot"></view>
+</view>

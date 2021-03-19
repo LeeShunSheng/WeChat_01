@@ -1,5 +1,5 @@
 <view class="head">(只显示近4天天气)</view>
-<swiper class="body">
+<swiper class="body" circular="true">
   <block wx:for="{{casts}}" wx:key="*this" wx:for-item>
     <swiper-item class="day">
 
