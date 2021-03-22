@@ -3,7 +3,7 @@
     <form catchsubmit="formSubmit" method="get">
       <view>
         <view>输入要查询的日期：</view>
-        <input type="text"  class="search" placeholder="形如'2021-3-19'" name="message"/>
+        <input type="text"  class="search" placeholder="形如'2021-3-19'" name="message" bindfocus="clearShow"/>
       </view>
       <button form-type="submit" class="btn">搜索</button>
     </form>
@@ -23,7 +23,7 @@
     <view class="today" wx:else>
       <view class="date">{{err}}</view>
     </view>
-    <view class="event">
+    <view class="event" wx:if="{{err==''}}">
       <view class="etitle" wx:if="{{showText==0}}">安排</view>
       <view class="econ" wx:if="{{!myEvent&&showText==0}}">暂无</view>
       <view class="econ" wx:if="{{showText==0}}">{{myEvent}}</view>

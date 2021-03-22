@@ -3,24 +3,29 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.spring.dao.MyEventDao">
+
     <select id="selectEvents" resultType="com.spring.domain.MyEvent">
-        select sys.events.Date, sys.events.Even
-        from sys.events;
+        select sys.events.event
+        from sys.events
+        where openid = #{openid}
+        and date = #{date}
     </select>
 
     <insert id="creatEvent">
         insert into sys.events
-        values(#{Date}, #{Even})
+        values(#{openid}, #{date}, #{event})
     </insert>
 
     <update id="updateEvent">
         update sys.events
-        set Even = #{Even}
-        where Date = #{Date}
+        set event = #{event}
+        where openid = #{openid}
+        and date = #{date}
     </update>
 
     <delete id="delEvent">
         delete from events
-        where Date = #{Date}
+        where date = #{date}
+        and openid = #{openid}
     </delete>
 </mapper>

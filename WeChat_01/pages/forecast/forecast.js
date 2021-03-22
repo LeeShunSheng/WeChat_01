@@ -102,7 +102,6 @@ Page({
         extensions: 'all'
       },
       success:(res)=>{
-        console.log(res);
         this.setData({
           reporttime:res.data.forecasts[0].reporttime
         })

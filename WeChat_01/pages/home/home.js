@@ -21,7 +21,7 @@ Page({
     }
   },
   // 获取城市编码
-  getCityCode:function(getWeather){
+  getCityCode(getWeather){
     wx.getLocation({
       success:(res)=>{
         this.setData({
@@ -44,7 +44,7 @@ Page({
   },
 
   //根据cityCode获得天气情况
-  getWeather:function(cityCode){
+  getWeather(cityCode){
     wx.request({
       url: 'https://restapi.amap.com/v3/weather/weatherInfo',
       data:{
@@ -53,7 +53,6 @@ Page({
         extensions: 'base'
       },
       success:(res)=>{
-        console.log(res);
         this.setData({
           'weather.city': res.data.lives[0].city,
           'weather.humidity': res.data.lives[0].humidity,

@@ -10,11 +10,11 @@ public interface MyEventDao {
     int creatEvent(MyEvent myEvent);
 
     //删除事件
-    int delEvent(@Param("Date") String date);
+    int delEvent(@Param("openid") String openid, @Param("date") String date);
 
     //更新事件
     int updateEvent(MyEvent myEvent);
 
     //查询事件
-    List<MyEvent> selectEvents();
+    List<MyEvent> selectEvents(@Param("date") String date, @Param("openid") String openid);
 }

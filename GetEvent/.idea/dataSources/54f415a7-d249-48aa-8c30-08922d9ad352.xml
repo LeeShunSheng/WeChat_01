@@ -3805,20 +3805,18 @@ mysql&gt; SELECT VERSION(), sys.version_patch();
       <Definer>mysql.sys@localhost</Definer>
       <RoutineKind>function</RoutineKind>
     </routine>
-    <column id="438" parent="284" name="Date">
+    <column id="438" parent="284" name="openid">
       <Position>1</Position>
-      <DataType>varchar(20)|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>varchar(50)|0s</DataType>
     </column>
-    <column id="439" parent="284" name="Even">
+    <column id="439" parent="284" name="date">
       <Position>2</Position>
+      <DataType>varchar(20)|0s</DataType>
+    </column>
+    <column id="440" parent="284" name="event">
+      <Position>3</Position>
       <DataType>varchar(100)|0s</DataType>
     </column>
-    <key id="440" parent="284" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>Date</ColNames>
-      <Primary>1</Primary>
-    </key>
     <column id="441" parent="285" name="id">
       <Position>1</Position>
       <Comment>主键id</Comment>

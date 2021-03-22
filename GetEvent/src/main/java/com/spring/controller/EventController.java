@@ -20,30 +20,30 @@ public class EventController {
     @RequestMapping("/create")
     @ResponseBody
     public int createMyEvent(MyEvent myEvent){
-        System.out.println("日期："+myEvent.getDate()+" 事件:" + myEvent.getEven());
+        System.out.println("日期："+myEvent.getDate()+" 事件:" + myEvent.getEvent());
         return eventService.createOneEvent(myEvent);
     }
 
     //删除指定事件
     @RequestMapping("/delete")
     @ResponseBody
-    public int delMyEvent(String date){
+    public int delMyEvent(String openid, String date){
         System.out.println("删除指定事件的日期:" + date);
-        return eventService.delOneEvent(date);
+        return eventService.delOneEvent(openid, date);
     }
 
     //更新事件
     @RequestMapping("/update")
     @ResponseBody
     public int updateMyEvent(MyEvent myEvent){
-        System.out.println("日期："+ myEvent.getDate() + " 事件:" + myEvent.getEven());
+        System.out.println("日期："+ myEvent.getDate() + " 事件:" + myEvent.getEvent());
         return eventService.updateOneEvent(myEvent);
     }
 
     //查询全部事件
     @RequestMapping("/select")
     @ResponseBody
-    public List<MyEvent> getMyEvents(){
-        return eventService.getAllEvents();
+    public List<MyEvent> getMyEvents(String date, String openid){
+        return eventService.getAllEvents(date, openid);
     }
 }

@@ -1,30 +1,32 @@
 package com.spring.domain;
 
 public class MyEvent {
-    private String Date;
-    private String Even;
+
+    private String openid;
+    private String date;
+    private String event;
+
+    public String getOpenid() {
+        return openid;
+    }
+
+    public void setOpenid(String openid) {
+        this.openid = openid;
+    }
 
     public String getDate() {
-        return Date;
+        return date;
     }
 
     public void setDate(String date) {
-        Date = date;
+        this.date = date;
     }
 
-    public String getEven() {
-        return Even;
+    public String getEvent() {
+        return event;
     }
 
-    public void setEven(String even) {
-        Even = even;
-    }
-
-    @Override
-    public String toString() {
-        return "MyEvent{" +
-                "Date='" + Date + '\'' +
-                ", Even='" + Even + '\'' +
-                '}';
+    public void setEvent(String event) {
+        this.event = event;
     }
 }

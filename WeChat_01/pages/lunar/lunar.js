@@ -8,7 +8,8 @@ Page({
     err:'',
     myEvent:'',
     showText:'0',
-    update:'0'
+    update:'0',
+    myOpenid:''
   },
   getToday(){
     const date = new Date();
@@ -19,26 +20,7 @@ Page({
     this.setData({
       today: v_today
     })
-  },
-  getEvent(day){
-    wx.request({
-      url: 'http://localhost:8081/myData/event/select',
-      success:(res)=>{
-        this.setData({
-          myEvent: ''
-        })
-        var event;
-        for(var i in res.data){
-          if(res.data[i].date == day){
-            event = res.data[i].even;
-            break;
-          }
-        }
-        this.setData({
-          myEvent: event
-        })
-      }
-    })
+    return v_today;
   },
   getThings(iday){
     wx.request({
@@ -73,15 +55,66 @@ Page({
       today: ''
     })
     this.getThings(msg);
-    console.log(msg);
-    this.getEvent(msg);
+    this.getEvent(msg,this.data.myOpenid);
   },
   onLoad: function (options) {
     this.getToday();
     this.getThings(this.data.today);
-    this.getEvent(this.data.today);
-    
+    this.getOpenId(this.getEvent);
   },
+  //获取openid
+  getOpenId(getEvent){
+    var openid = '';
+    wx.login({
+      success:(res)=>{
+        var code = res.code;
+        wx.request({
+          url: 'https://api.weixin.qq.com/sns/jscode2session',
+          data:{
+            appid: 'wxd6a109dd8d046425',
+            secret: '8c67db39372a496fbe6fa7dbc1db62b8',
+            js_code: code,
+            grant_type: 'authorization_code'
+          },
+          success:(res)=>{
+            openid = res.data.openid;
+            this.setData({
+              myOpenid: openid
+            })
+            getEvent(this.getToday(), openid);
+          }
+        });
+        }
+      }) 
+  },
+  //获取当日事件
+  getEvent(date, myOpenid){
+    wx.request({
+      url: 'http://localhost:8081/myData/event/select',
+      data:{
+        openid: myOpenid,
+        date: date
+      },
+      success:(res)=>{
+        if(res.data.length < 1){
+          this.setData({
+            myEvent: '',
+          })
+        }
+        else{
+          var event = res.data[0].event;
+          this.setData({
+            myEvent: '',
+          })
+          this.setData({
+            myEvent: event
+          })
+        }
+        
+      }
+    })
+  },
+  //删除事件
   delEvent(){
     var showday;
     if(this.data.today == '')
@@ -91,7 +124,8 @@ Page({
     wx.request({
       url: 'http://localhost:8081/myData/event/delete',
       data:{
-        date:showday
+        date:showday,
+        openid: this.data.myOpenid
       },
       success:(res)=>{
         this.setData({
@@ -136,12 +170,25 @@ Page({
     wx.request({
       url: v_url,
       data:{
-        Date: showday,
-        Even: this.data.myEvent
+        date: showday,
+        event: this.data.myEvent,
+        openid: this.data.myOpenid
       }
     })
     this.setData({
       update: 0
     })
-  }
+  },
+  //保证输入时，下面显示是正常的
+clearShow(){
+  this.setData({
+    showText:0,
+  })
+  var showday;
+  if(this.data.today == '')
+    showday = this.data.sday;
+  else
+    showday = this.data.today;
+  this.getEvent(showday, this.data.myOpenid);
+}
 })

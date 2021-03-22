@@ -15,14 +15,14 @@ public class EventServiceImpl implements EventService {
     private MyEventDao myEventDao;
     //查询所有事件
     @Override
-    public List<MyEvent> getAllEvents() {
-        return myEventDao.selectEvents();
+    public List<MyEvent> getAllEvents(String date, String openid) {
+        return myEventDao.selectEvents(date, openid);
     }
 
     //删除指定事件
     @Override
-    public int delOneEvent(String date) {
-        return myEventDao.delEvent(date);
+    public int delOneEvent(String openid, String date) {
+        return myEventDao.delEvent(openid, date);
     }
 
     //更新指定事件
