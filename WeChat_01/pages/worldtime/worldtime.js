@@ -1,6 +1,6 @@
 Page({
   data: {
-    key:'9066a2f1f1b79b328d7ad5e9d205a63e',
+    key:'********',
     city:'',
     result:'',
     err:''
