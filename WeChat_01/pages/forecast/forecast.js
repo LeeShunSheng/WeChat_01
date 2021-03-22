@@ -8,7 +8,7 @@ Page({
   data: {
     latitude: 0,
     longitude: 0,
-    key: '2ca8c96e40912c0e81a0a9ebe9e9ade2',
+    key: '***********',
     reporttime:'loading',
     casts:[
       {
