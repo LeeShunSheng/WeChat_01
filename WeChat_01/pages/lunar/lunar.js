@@ -71,8 +71,8 @@ Page({
         wx.request({
           url: 'https://api.weixin.qq.com/sns/jscode2session',
           data:{
-            appid: 'wxd6a109dd8d046425',
-            secret: '8c67db39372a496fbe6fa7dbc1db62b8',
+            appid: '**********',
+            secret: '**********',
             js_code: code,
             grant_type: 'authorization_code'
           },
